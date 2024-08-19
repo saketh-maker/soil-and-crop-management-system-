@@ -5,14 +5,6 @@ SOIL AND CROP MANAGEMENT SYSTEM HOME PAGE
 
 <img width="959" alt="home page" src="https://github.com/user-attachments/assets/53161661-68a5-4891-9e4e-acb61569db0f">
 
-CROP RECOMMENDATION HOME PAGE
-
-<img width="959" alt="crop recomendation home page" src="https://github.com/user-attachments/assets/1dce0f7b-27da-4414-92b6-80ac24d1acf7">
-
-CROP RECOMMENDATION RESULT PAGE
-
-<img width="476" alt="crop recomendation in server output" src="https://github.com/user-attachments/assets/2e75ab1a-f887-4421-9e47-cf205a41dfd3">
-
 SOIL MANAGEMENT HOME PAGE
 
 <img width="959" alt="soil management home page" src="https://github.com/user-attachments/assets/c4f82c2f-dea2-4a0b-bed4-b63151dd3d8b">
@@ -20,6 +12,13 @@ SOIL MANAGEMENT HOME PAGE
 SOIL MANAGEMENT RESULT PAGE
 
 <img width="957" alt="soil manegemnt output" src="https://github.com/user-attachments/assets/7c6c0532-44fc-4935-9552-6e891bcca91f">
+CROP RECOMMENDATION HOME PAGE
+
+<img width="959" alt="crop recomendation home page" src="https://github.com/user-attachments/assets/1dce0f7b-27da-4414-92b6-80ac24d1acf7">
+
+CROP RECOMMENDATION RESULT PAGE
+
+<img width="476" alt="crop recomendation in server output" src="https://github.com/user-attachments/assets/2e75ab1a-f887-4421-9e47-cf205a41dfd3">
 
 DISEASE IDENTIFICATION HOME PAGE
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Management Result</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Soil Management Recommendation</h1>
+        <p id="soil-result" class="result-text"></p>
+        <a href="soil-management.html" class="btn">Go Back</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const soilRecommendation = localStorage.getItem('soilRecommendation');
+            document.getElementById('soil-result').innerText = `Recommendation: ${soilRecommendation}`;
+        });
+    </script>
+</body>
+</html>

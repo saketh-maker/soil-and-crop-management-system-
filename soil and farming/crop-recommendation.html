@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Crop Recommendation System</h1>
+        <form id="crop-form" onsubmit="return handleFormSubmit(event)">
+            <label for="soil-type">Soil Type:</label>
+            <div class="select-wrapper">
+                <select id="soil-type" name="soil_type" required>
+                    <option value="1">Loamy</option>
+                    <option value="2">Sandy</option>
+                    <option value="3">Clay</option>
+                </select>
+            </div>
+            <label for="region">Region:</label>
+            <div class="select-wrapper">
+                <select id="region" name="region" required>
+                    <option value="1">North</option>
+                    <option value="2">South</option>
+                    <option value="3">East</option>
+                    <option value="4">West</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Get Recommendations</button>
+        </form>
+    </div>
+    <script>
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            const soilType = document.getElementById('soil-type').value;
+            const region = document.getElementById('region').value;
+
+            const response = await fetch('http://localhost:5000/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ soil_type: soilType, region: region })
+            });
+            const result = await response.json();
+            localStorage.setItem('recommendedCrop', result.crop);
+            window.location.href = 'result.html';
+        }
+    </script>
+</body>
+</html>

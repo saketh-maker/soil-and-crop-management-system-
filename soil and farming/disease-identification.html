@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Identification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Disease Identification</h1>
+        <form id="disease-form" action="disease-result.html" method="GET" onsubmit="return handleDiseaseSubmit(event)">
+            <label for="crop-type">Crop Type:</label>
+            <div class="select-wrapper">
+                <select id="crop-type" name="crop_type" required>
+                    <option value="wheat">Wheat</option>
+                    <option value="peanuts">Peanuts</option>
+                    <option value="rice">Rice</option>
+                    <option value="corn">Corn</option>
+                </select>
+            </div>
+            <label for="symptoms">Symptoms:</label>
+            <textarea id="symptoms" name="symptoms" rows="4" required></textarea>
+            <button type="submit" class="btn">Identify Disease</button>
+        </form>
+    </div>
+    <script>
+        function handleDiseaseSubmit(event) {
+            const cropType = document.getElementById('crop-type').value;
+            const symptoms = document.getElementById('symptoms').value;
+            const disease = identifyDisease(cropType, symptoms);
+            localStorage.setItem('identifiedDisease', disease);
+            return true;
+        }
+
+        function identifyDisease(cropType, symptoms) {
+            // Dummy logic for disease identification
+            if (cropType === 'wheat' && symptoms.includes('yellow')) {
+                return 'Wheat Rust';
+            } else if (cropType === 'peanuts' && symptoms.includes('wilting')) {
+                return 'Peanut Wilt';
+            } else if (cropType === 'rice' && symptoms.includes('spots')) {
+                return 'Rice Blast';
+            } else if (cropType === 'corn' && symptoms.includes('cob rot')) {
+                return 'Corn Smut';
+            } else {
+                return 'Disease not identified';
+            }
+        }
+    </script>
+</body>
+</html>

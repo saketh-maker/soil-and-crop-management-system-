@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identified Disease</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Identified Disease</h1>
+        <p id="disease-result" class="result-text"></p>
+        <img id="disease-image" class="disease-image" src="" alt="Disease Image">
+        <a href="disease-identification.html" class="btn">Go Back</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const identifiedDisease = localStorage.getItem('identifiedDisease');
+            document.getElementById('disease-result').innerText = `The identified disease is: ${identifiedDisease}`;
+            const diseaseImage = document.getElementById('disease-image');
+            
+            if (identifiedDisease === 'Wheat Rust') {
+                diseaseImage.src = 'images/wheat-rust.jpg';
+            } else if (identifiedDisease === 'Peanut Wilt') {
+                diseaseImage.src = 'images/peanut-wilt.jpg';
+            } else if (identifiedDisease === 'Rice Blast') {
+                diseaseImage.src = 'images/rice-blast.jpg';
+            } else if (identifiedDisease === 'Corn Smut') {
+                diseaseImage.src = 'images/corn-smut.jpg';
+            } else {
+                diseaseImage.src = 'images/no-disease.jpg';
+            }
+        });
+    </script>
+</body>
+</html>
